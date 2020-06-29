@@ -1,0 +1,19 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+
+}
+
+.title {
+    text-align: center;
+    font-size: 76px;
+}
+
+.time {
+    font-size: 102px;
+    text-align: center;
+}
