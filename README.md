@@ -1,2 +1,2 @@
 # Time
-Ссылка https://time-lovat.vercel.app/
+Ссылка https://time-virid.vercel.app/
