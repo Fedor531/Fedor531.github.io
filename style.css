@@ -6,10 +6,6 @@ body {
   box-sizing: border-box;
 }
 
-.time {
-  margin-top: 200px;
-}
-
 .time__title {
   text-align: center;
   font-size: 96px;
