@@ -6,27 +6,22 @@ function changeTime() {
 }
 
 function checkHours(hour) {
-  const hourElement = document.querySelector('.time__hours').textContent
-  let newHour = hour
-  if (newHour !== Number(hourElement)) {
-    document.querySelector('.time__hours').textContent = checkWriting(newHour)
-    console.log('перерисовка часов произошла')
+  const hourElementText = document.querySelector('.time__hours').textContent
+  if (hour !== Number(hourElementText)) {
+    document.querySelector('.time__hours').textContent = checkWriting(hour)
   }
 }
 
 function checkMinutes(minute) {
-  const minuteElement = document.querySelector('.time__minutes').textContent
-  let newMinunte = minute
-  if (newMinunte !== Number(minuteElement)) {
-    document.querySelector('.time__minutes').textContent = checkWriting(newMinunte)
-    console.log('перерисовка минуты произошла')
+  const minuteElementText = document.querySelector('.time__minutes').textContent
+  if (minute !== Number(minuteElementText)) {
+    document.querySelector('.time__minutes').textContent = checkWriting(minute)
   }
 }
 
 function checkSeconds(second) {
   document.querySelector('.time__seconds').textContent = checkWriting(second)
 }
-
 
 function checkWriting(number) {
   let newNumber = number
@@ -35,7 +30,5 @@ function checkWriting(number) {
   }
   return newNumber
 }
-
-
 
 setInterval(changeTime, 1000)
