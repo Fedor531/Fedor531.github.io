@@ -8,14 +8,14 @@
         const date = new Date()
         checkHours(date.getHours())
         checkMinutes(date.getMinutes())
-        redrawElement(secondNode, date.getSeconds())
+        redrawNode(secondNode, date.getSeconds())
     }
 
     // Function to check redrawing
     function checkHours(hour) {
         const hourElementText = hourNode.textContent
         if (hour !== hourElementText) {
-            redrawElement(hourNode, hour)
+            redrawNode(hourNode, hour)
         }
     }
 
@@ -23,11 +23,11 @@
     function checkMinutes(minute) {
         const minuteElementText = minuteNode.textContent
         if (minute !== minuteElementText) {
-            redrawElement(minuteNode, minute)
+            redrawNode(minuteNode, minute)
         }
     }
 
-    function redrawElement(node, value) {
+    function redrawNode(node, value) {
         node.textContent = formatNumber(value)
     }
 
