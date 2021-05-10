@@ -1,2 +1,3 @@
-# Time
-Ссылка https://time-virid.vercel.app/
+# Timer
+### Тестовое задание <br/>
+https://time-virid.vercel.app/
