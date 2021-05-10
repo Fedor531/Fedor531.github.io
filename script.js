@@ -30,7 +30,6 @@
     console.log('перерисовка минуты произошла')
   }
 
-
   function formatingNumber(number) {
     let newNumber = number
     if (newNumber < 10) {
