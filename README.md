@@ -1,10 +1,9 @@
-# Timer
-### Project: Test task
-### Company: "Elecard-med"
-### Technology:
+# Clock
+#### Test task
+#### Company: "Elecard-med"
+#### Task: Implement clock (hour, minute, second) in a web page
+#### Technology:
 * HTML
 * CSS
 * JavaScript
-### Description:
-Real-time timer implemented
-### Link: https://time-virid.vercel.app/
+#### Link: https://time-virid.vercel.app/
