@@ -1,43 +1,44 @@
 (function () {
 
-  function changeTime() {
-    const date = new Date()
-    checkHours(date.getHours())
-    checkMinutes(date.getMinutes())
-    document.querySelector('.time__seconds').textContent = formatingNumber(date.getSeconds())
-  }
+    const hourNode = document.querySelector('.clock__hours')
+    const minuteNode = document.querySelector('.clock__minutes')
+    const secondNode = document.querySelector('.clock__seconds')
 
-  function checkHours(hour) {
-    const hourElementText = document.querySelector('.time__hours').textContent
-    if (hour !== hourElementText) {
-      redrawHours(hour)
+    function changeTime() {
+        const date = new Date()
+        checkHours(date.getHours())
+        checkMinutes(date.getMinutes())
+        redrawElement(secondNode, date.getSeconds())
     }
-  }
 
-  function redrawHours(hour) {
-    document.querySelector('.time__hours').textContent = formatingNumber(hour)
-  }
-
-  function checkMinutes(minute) {
-    const minuteElementText = document.querySelector('.time__minutes').textContent
-    if (minute !== minuteElementText) {
-      redrawMinutes(minute)
+    // Function to check redrawing
+    function checkHours(hour) {
+        const hourElementText = hourNode.textContent
+        if (hour !== hourElementText) {
+            redrawElement(hourNode, hour)
+        }
     }
-  }
 
-  function redrawMinutes(minute) {
-    document.querySelector('.time__minutes').textContent = formatingNumber(minute)
-    console.log('перерисовка минуты произошла')
-  }
-
-  function formatingNumber(number) {
-    let newNumber = number
-    if (newNumber < 10) {
-      newNumber = `0${number}`
+    // Function to check redrawing
+    function checkMinutes(minute) {
+        const minuteElementText = minuteNode.textContent
+        if (minute !== minuteElementText) {
+            redrawElement(minuteNode, minute)
+        }
     }
-    return newNumber
-  }
 
-  setInterval(changeTime, 1000)
+    function redrawElement(node, value) {
+        node.textContent = formatNumber(value)
+    }
+
+    function formatNumber(number) {
+        let newNumber = number
+        if (newNumber < 10) {
+            newNumber = `0${number}`
+        }
+        return newNumber
+    }
+
+    setInterval(changeTime, 1000)
 
 })()
