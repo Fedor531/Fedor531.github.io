@@ -1,6 +1,6 @@
 (function () {
 
-    const hourNode = document.querySelector('.clock__hours')
+    const hourNode   = document.querySelector('.clock__hours')
     const minuteNode = document.querySelector('.clock__minutes')
     const secondNode = document.querySelector('.clock__seconds')
 
