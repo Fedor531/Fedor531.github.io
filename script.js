@@ -1,33 +1,39 @@
 (function () {
 
-    const hourNode   = document.querySelector('.clock__hours')
+    const hourNode = document.querySelector('.clock__hours')
     const minuteNode = document.querySelector('.clock__minutes')
     const secondNode = document.querySelector('.clock__seconds')
 
     function changeTime() {
         const date = new Date()
-        checkToRedraw(hourNode, date.getHours())
-        checkToRedraw(minuteNode, date.getMinutes())
+
+        redrawNode(hourNode, date.getHours())
+        redrawNode(minuteNode, date.getMinutes())
         redrawNode(secondNode, date.getSeconds())
+    }
+
+    function redrawNode(node, value) {
+        if (checkToRedraw(node, value)) {
+            node.textContent = formatNumber(value)
+        }
     }
 
     // Function to check redrawing
     function checkToRedraw(node, value) {
         const nodeElementText = +node.textContent
-        if (value !== nodeElementText) {
-            redrawNode(node, value)
-        }
-    }
 
-    function redrawNode(node, value) {
-        node.textContent = formatNumber(value)
+        if (value !== nodeElementText) {
+            return true
+        }
     }
 
     function formatNumber(number) {
         let newNumber = number
+
         if (newNumber < 10) {
             newNumber = `0${number}`
         }
+
         return newNumber
     }
 
