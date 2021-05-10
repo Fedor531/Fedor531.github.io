@@ -7,4 +7,4 @@
 * HTML
 * CSS
 * JavaScript
-#### Link: https://time-virid.vercel.app/
+#### Link: https://fedor531.github.io/clock-test/
