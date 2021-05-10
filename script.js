@@ -20,9 +20,9 @@
 
     // Function to check redrawing
     function checkToRedraw(node, value) {
-        const nodeElementText = +node.textContent
+        const nodeNumber = +node.textContent
 
-        if (value !== nodeElementText) {
+        if (value !== nodeNumber) {
             return true
         }
     }
